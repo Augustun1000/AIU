@@ -5,7 +5,7 @@ timedatectl set-ntp true
 echo "Please enter EFI paritition: (example /dev/sda1 or /dev/nvme0n1p1)"
 read EFI
 
-echo "Please enter Root(/) paritition: (example /dev/sda3)"
+echo "Please enter Root(/) paritition: (example /dev/sda2(Root+user))"
 read ROOT  
 
 echo "Please enter your Username"
