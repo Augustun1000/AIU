@@ -1,7 +1,7 @@
 #!/bin/bash
-
+#By Augustun1000
 # Define variables
-DISK="/dev/sdX"        # Replace with your actual disk identifier
+DISK="/dev/sd1"        # Replace with your actual disk identifier
 PART1_SIZE="1GB"       # Size of the first partition (FAT32)
 
 # Check if running as root
