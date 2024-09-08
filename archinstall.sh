@@ -105,6 +105,7 @@ options root=UUID=$ROOT_UUID rw quiet
 EOF
 else
     pacman -S grub efibootmgr --noconfirm --needed
+    #grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id="Linux Boot Manager"
     grub-install --target=i386-pc /dev/sda
     grub-mkconfig -o /boot/grub/grub.cfg
 fi
@@ -116,5 +117,3 @@ echo "-------------------------------------------------"
 REALEND
 
 arch-chroot /mnt sh next.sh
-
-#grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id="Linux Boot Manager"
