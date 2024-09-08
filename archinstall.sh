@@ -5,7 +5,7 @@ timedatectl set-ntp true
 echo "Please enter EFI paritition: (example /dev/sda1 or /dev/nvme0n1p1)"
 read EFI
 
-echo "Please enter Root(/) paritition: (example /dev/sda2(Root+user))"
+echo "Please enter Root(/) paritition: (example /dev/sda3)"
 read ROOT  
 
 echo "Please enter your Username"
@@ -20,7 +20,7 @@ read PASSWORD
 while true; do
     echo "Choose Bootloader"
     echo "1. Systemdboot"
-    echo "2. GRUB"
+    echo "2. GRUB MBR"
     read BOOT
 
     # Check if input is either 1 or 2
@@ -105,7 +105,7 @@ options root=UUID=$ROOT_UUID rw quiet
 EOF
 else
     pacman -S grub efibootmgr --noconfirm --needed
-    grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id="Linux Boot Manager"
+    grub-install --target=i386-pc /dev/sda
     grub-mkconfig -o /boot/grub/grub.cfg
 fi
 
@@ -117,3 +117,4 @@ REALEND
 
 arch-chroot /mnt sh next.sh
 
+#grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id="Linux Boot Manager"
