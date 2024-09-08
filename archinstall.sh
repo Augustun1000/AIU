@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
-#Copyright (C) 2024 Augustun1000 <augustoperezriesgo@gmail.com>
 #By Augustun1000
 timedatectl set-ntp true
 
 echo "Please enter EFI paritition: (example /dev/sda1 or /dev/nvme0n1p1)"
 read EFI
 
-echo "Please enter Root(/) paritition: (example /dev/sda3)"
+echo "Please enter Root(/) paritition: (example /dev/sda2)"
 read ROOT  
 
 echo "Please enter your Username"

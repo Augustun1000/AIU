@@ -1,5 +1,4 @@
 #!/bin/bash
-#Copyright (C) 2024 Augustun1000 <augustoperezriesgo@gmail.com>
 #By Augustun1000
 # Define color variables
 RED='\033[0;31m'
