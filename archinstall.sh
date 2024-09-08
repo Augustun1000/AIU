@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Copyright (C) 2024 Augustun1000 <augustoperezriesgo@gmail.com>
 #By Augustun1000
 timedatectl set-ntp true
 
