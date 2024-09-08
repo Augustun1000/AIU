@@ -1,7 +1,7 @@
 #!/bin/bash
-function MRB() {
+function MBR() {
     # Define variables
-DISK="/dev/sdX"        # Replace with your actual disk identifier
+DISK="/dev/sda"        # Replace with your actual disk identifier
 PART1_SIZE="1GB"       # Size of the first partition (FAT32)
 
 # Check if running as root
@@ -34,7 +34,7 @@ echo "Remaining space formatted as ext4 at ${DISK}2."
 }
 function GPT() {
     # Define variables
-DISK="/dev/sdX"        # Replace with your actual disk identifier
+DISK="/dev/sda"        # Replace with your actual disk identifier
 PART1_SIZE="1GB"       # Size of the first partition (FAT32)
 
 # Check if running as root
@@ -69,12 +69,12 @@ echo "Remaining space formatted as ext4 at ${DISK}2."
 menu(){
 echo -ne "
 Power menu
-$(ColorGreen '1)') Format drive with MRB
-$(ColorGreen '2)') Format drive with GPT
+$(ColorGreen '1)') Format drive with MBR and ext4
+$(ColorGreen '2)') Format drive with GPT and ext4
 $(ColorBlue 'Choose an option:') "
         read a
         case $a in
-	        1) MRB; menu ;;
+	        1) MBR; menu ;;
 	        2) GPT ; menu ;;
 		0) exit 0 ;;
 		*) echo -e $red"Wrong option."$clear; WrongCommand;;
