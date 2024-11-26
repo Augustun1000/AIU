@@ -1,0 +1,94 @@
+Packages information:
+
+-xorg-server xorg-xinit xorg-xrandr xdg-user-dirs xf86-video-intel vulkan-intel lib32-vulkan-intel vulkan-tools mesa lib32-mesa intel-media-driver libva-utils vdpauinfo clinfo: Is for video drivers
+-openbox: Is the windows manager
+-obconf: Is for config openbox
+-arandr: Is for edit screen resolution
+-feh: Is the screen wallpaper
+-htop: Is a CLI program to see the machime resource consumision
+-neofetch: Is a CLI program to see machine specifications
+-adapta-gtk-theme: Theme for programs
+-tint2: Is a menu bar
+-networkmanager: Is a program for configure network
+-xfce4-power-manager: Is for edit screen time
+-lm_sensors: For see temperature of processor
+-lxappearance-gtk3: Theme for programs
+-nano: Text editor for terminal
+-geany: Text editor program, no for terminal
+-rofi: menu for execute programs
+-p7zip: 7zip port for compress archives
+-gimp: Photo editor
+-steam: Is for play games
+-kitty: Linux terminal
+-xterm: Linux terminal
+-flameshot: Program for screenshot
+-baobab: Disk file analizer
+-xarchiver: Gui for p7zip
+-viewnior: Is a program to see photos
+-meld: Is a program to compare differences in code for two files
+-mplayer: Video reproductor
+-papirus-icon-theme: Programs theme
+-ttf-dejavu ttf-liberation noto-fonts: Fonts for linux
+-gnome-disk-utility: Gui for edit configuration for disk
+-gparted: Gui to edit partitions on the disk
+-pulseaudio: Dirvers for audio
+-pulsemixer: Cli app for edit audio level
+-mtpfs gvfs-mtp gvfs-gphoto2: Plugins to see other disk
+-cbatticon: Use to see baterry % in netbooks, laptops, etc
+-yad: Use to confire poweroff menu in tint2(Yad is shell with gui)
+-ncdu: Cli app to see usage in disk
+How to use/configure this:
+
+#Steam proton: create a folder: mkdir /home/augustun1000/.steam/steam/compatibilitytools.d in where extract ge proton
+
+#Connect to wifi using NetworkManager: nmcli d wifi connect (Wifi name) password (password of wifi)
+
+#Change brightness:
+#brightnessctl set 10%+ increase by 10%
+#brightnessctl set 10%- decrease by 10%
+
+#Change time:
+#timedatectl set-ntp false 
+#timedatectl set-time "2014-10-26 11:13:54"
+
+#Dual boot:
+#edit: /etc/default/grub
+#gnome-disks and os-prober packages mount boot partition with gnome-disks and sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+#Compile custom Kernel Guide
+#Package to use: sudo pacman -S --noconfirm base-devel xmlto kmod inetutils bc libelf git
+#mkdir kernelbuild
+#cd kernelbuild
+#mkdir ~/kernelbuild
+#wget (your favorite kernel) in: https://www.kernel.org
+#tar -xvf (your favorite kernel)
+#chown -R $augustun1000:$USER (your favorite kernel)
+#cd (your favorite kernel)
+#make mrproper / make localmodconfig
+#make menuconfig
+#make -j$(nproc)
+#sudo su
+#make modules_install
+#cp -v arch/x86/boot/bzImage /boot/vmlinuz-(your favorite kernel)
+#mkinitcpio -k (your favorite kernel) -c /etc/mkinitcpio.conf -g /boot/initramfs-(your favorite kernel).img
+#In case you not encuenter your kernel number use: ls /usr/lib/modules
+#cp System.map /boot/System.map-(your favorite kernel)
+#grub-mkconfig -o /boot/grub/grub.cfg
+#Finish
+
+#Install i915 intel module:
+#sudo nano /etc/mkinitcpio.conf
+#...
+#MODULES=(i915)
+#...
+#sudo mkinitcpio -P 
+#sudo grub-mkconfig -o /boot/grub/grub.cfg
+#Finish
+
+#Load xrdb -load .Xresources in terminal for apply xterm config
+
+Commands in linux:
+Update system: sudo pacman -Syyu
+Install package: sudo pacman -S (Name)
+
+
