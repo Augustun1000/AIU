@@ -24,3 +24,4 @@ This is my custom automated Arch Linux installation
 - Suckless programs
 - Binaries
 - Dotfiles
+- The configuration is changed by recompiling the programs
