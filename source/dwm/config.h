@@ -72,12 +72,14 @@ static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%"
 static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute", "0", "toggle", NULL };
 static const char *brightnessup[] = { "/home/augustun1000/.config/scripts/suckless/dwm/brightnessUP.sh", "ARGUMENTS", NULL };
 static const char *brightnessdown[]  = { "/home/augustun1000/.config/scripts/suckless/dwm/brightnessDOWN.sh", "ARGUMENTS", NULL };
+static const char *utilities[]  = { "st", "/home/augustun1000/.config/scripts/suckless/dwm/Utilities-Cli-Augustun1000.sh", "ARGUMENTS", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ WINKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
 	{ ControlMask|MODKEY,           XK_t,      spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_t,      spawn,          {.v = pcmanfm } },
+	{ WINKEY,                       XK_Menu,      spawn,          {.v = utilities } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
