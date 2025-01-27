@@ -66,13 +66,13 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *pcmanfm[]  = { "/home/augustun1000/.config/scripts/suckless/dwm/pcmanfm.sh", "ARGUMENTS", NULL };
+static const char *pcmanfm[]  = { ".config/scripts/suckless/dwm/pcmanfm.sh", "ARGUMENTS", NULL };
 static const char *upvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%", NULL };
 static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%", NULL };
 static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute", "0", "toggle", NULL };
-static const char *brightnessup[] = { "/home/augustun1000/.config/scripts/suckless/dwm/brightnessUP.sh", "ARGUMENTS", NULL };
-static const char *brightnessdown[]  = { "/home/augustun1000/.config/scripts/suckless/dwm/brightnessDOWN.sh", "ARGUMENTS", NULL };
-static const char *utilities[]  = { "st", "/home/augustun1000/.config/scripts/suckless/dwm/Utilities-Cli-Augustun1000.sh", "ARGUMENTS", NULL };
+static const char *brightnessup[] = { ".config/scripts/suckless/dwm/brightnessUP.sh", "ARGUMENTS", NULL };
+static const char *brightnessdown[]  = { ".config/scripts/suckless/dwm/brightnessDOWN.sh", "ARGUMENTS", NULL };
+static const char *utilities[]  = { "st", ".config/scripts/suckless/dwm/Utilities-Cli-Augustun1000.sh", "ARGUMENTS", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
