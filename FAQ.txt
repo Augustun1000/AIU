@@ -1,41 +1,31 @@
 Packages information:
 
 -xorg-server xorg-xinit xorg-xrandr xdg-user-dirs xf86-video-intel vulkan-intel lib32-vulkan-intel vulkan-tools mesa lib32-mesa intel-media-driver libva-utils vdpauinfo clinfo: Is for video drivers
--openbox: Is the windows manager
--obconf: Is for config openbox
 -arandr: Is for edit screen resolution
 -feh: Is the screen wallpaper
 -htop: Is a CLI program to see the machime resource consumision
--neofetch: Is a CLI program to see machine specifications
--adapta-gtk-theme: Theme for programs
--tint2: Is a menu bar
+-fastfetch: Is a CLI program to see machine specifications
 -networkmanager: Is a program for configure network
--xfce4-power-manager: Is for edit screen time
 -lm_sensors: For see temperature of processor
 -lxappearance-gtk3: Theme for programs
 -nano: Text editor for terminal
 -geany: Text editor program, no for terminal
 -rofi: menu for execute programs
 -p7zip: 7zip port for compress archives
--gimp: Photo editor
--steam: Is for play games
--kitty: Linux terminal
--xterm: Linux terminal
+-st: Linux terminal
 -flameshot: Program for screenshot
 -baobab: Disk file analizer
--xarchiver: Gui for p7zip
--viewnior: Is a program to see photos
+-ark: Gui for compress files
 -meld: Is a program to compare differences in code for two files
 -mplayer: Video reproductor
--papirus-icon-theme: Programs theme
+-breeze: Theme for programs
+-breeze-gtk: Theme for programs
 -ttf-dejavu ttf-liberation noto-fonts: Fonts for linux
 -gnome-disk-utility: Gui for edit configuration for disk
 -gparted: Gui to edit partitions on the disk
 -pulseaudio: Dirvers for audio
 -pulsemixer: Cli app for edit audio level
 -mtpfs gvfs-mtp gvfs-gphoto2: Plugins to see other disk
--cbatticon: Use to see baterry % in netbooks, laptops, etc
--yad: Use to confire poweroff menu in tint2(Yad is shell with gui)
 -ncdu: Cli app to see usage in disk
 How to use/configure this:
 

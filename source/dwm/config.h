@@ -65,6 +65,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *roficmd[]  = { "rofi", "-show", "drun", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *pcmanfm[]  = { ".config/scripts/suckless/dwm/pcmanfm.sh", "ARGUMENTS", NULL };
 static const char *upvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%", NULL };
@@ -76,7 +77,8 @@ static const char *utilities[]  = { "st", ".config/scripts/suckless/dwm/Utilitie
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ WINKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
+	{ WINKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ WINKEY,                       XK_r,      spawn,          {.v = roficmd } },
 	{ ControlMask|MODKEY,           XK_t,      spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_t,      spawn,          {.v = pcmanfm } },
 	{ WINKEY,                       XK_Menu,      spawn,          {.v = utilities } },
