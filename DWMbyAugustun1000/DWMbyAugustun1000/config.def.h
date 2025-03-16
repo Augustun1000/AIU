@@ -164,6 +164,9 @@ static const Key keys[] = {
     // File Manager
     { MODKEY,                           XK_t,      spawn, SHCMD("pcmanfm") },
     
+    // Custom Menu by Augustun1000
+    { WINKEY,                       XK_Menu,      spawn, SHCMD("st -e ~/.config/DWMbyAugustun1000/scripts/Utilities-Cli-Augustun1000.sh") },
+    
     // toggle stuff
     { MODKEY,                           XK_b,       togglebar,      {0} },
     { MODKEY|ControlMask,               XK_t,       togglegaps,     {0} },
@@ -239,7 +242,7 @@ static const Key keys[] = {
     { MODKEY|ShiftMask,                 XK_w,       setborderpx,    {.i = default_border } },
 
     // kill dwm
-    { MODKEY|ControlMask,               XK_q,       spawn,        SHCMD("killall bar.sh chadwm") },
+    { MODKEY|ControlMask,               XK_q,       spawn,        SHCMD("killall statusbar.sh DWMbyAugustun1000") },
 
     // kill window
     { MODKEY,                           XK_F4,       killclient,     {0} },
